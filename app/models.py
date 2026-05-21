@@ -10,7 +10,7 @@ class User(Base):
     age= Column(Integer, nullable=False)
     weight_kg= Column(Float, nullable=False)
     height_cm= Column(Float, nullable=False)
-    gerder= Column(String, nullable=False)
+    gender= Column(String, nullable=False)
     activity_level = Column(String, nullable=False)
     health_goal = Column(String, nullable=False)
     created_at = Column(DateTime(timezone=True), server_default=func.now())
@@ -19,7 +19,7 @@ class FoodLog(Base):
     __tablename__="food_logs"
     id = Column(Integer , primary_key=True, index=True)
     user_id = Column(Integer , nullable=False)
-    food_items= Column(String, nullable=False)
+    food_item= Column(String, nullable=False)
     calories= Column(Float, nullable=False)
     protein_g= Column(Float, nullable=True)
     carbs_g= Column(Float, nullable=True)
