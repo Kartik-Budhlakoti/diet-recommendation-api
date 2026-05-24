@@ -1,6 +1,21 @@
 from pydantic import BaseModel
 from typing import Optional
 from datetime import datetime
+from enum import Enum
+
+class ActivityLevel(str, Enum):
+    sedentary = "sedentary"
+    light = "light"
+    moderate = "moderate"
+    active = "active"
+    very_active = "very_active"
+
+class HealthGoal(str , Enum):
+    weight_loss = "weight_loss"
+    weight_gain = "weight_gain"
+    muscle_building = "muscle_building"
+    balanced = "balanced"
+    diabetes = "diabetes"
 
 class UserCreate(BaseModel):
     name: str
@@ -8,8 +23,8 @@ class UserCreate(BaseModel):
     weight_kg:float
     height_cm:float
     gender:str
-    activity_level:str
-    health_goal: str
+    activity_level:ActivityLevel
+    health_goal: HealthGoal
 
 class UserResponse(BaseModel):
     id:int
