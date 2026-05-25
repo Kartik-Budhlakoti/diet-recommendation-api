@@ -56,7 +56,7 @@ class FoodLogResponse(BaseModel):
     protein_g: Optional[float]
     carbs_g:Optional[float]
     fat_g:Optional[float]
-    created_at: datetime
+    logged_at: datetime
 
     class Config:
         from_attributes = True
