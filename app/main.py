@@ -19,8 +19,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 app.include_router(users.router, prefix="/api/v1/users", tags=["Users"])
-app.include_router(diet.router, prefix="/api/v1/diet", tags=["diet"])
-app.include_router(logs.router, prefix="/api/v1/logs", tags=["logs"])
+app.include_router(diet.router, prefix="/api/v1/diet", tags=["Diet"])
+app.include_router(logs.router, prefix="/api/v1/logs", tags=["Logs"])
 
 @app.get("/")
 def root():

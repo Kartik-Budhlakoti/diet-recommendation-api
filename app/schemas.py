@@ -60,3 +60,17 @@ class FoodLogResponse(BaseModel):
 
     class Config:
         from_attributes = True
+
+class DietRecommendation(BaseModel):
+    user_id: int
+    bmi: float
+    bmi_category:str
+    daily_calorie: float
+    diet_category:str
+    breakfast: str
+    lunch:str
+    dinner:str
+    snacks:str
+    protein_g:float
+    carbs_g:float
+    fat_g:float
