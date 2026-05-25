@@ -75,7 +75,7 @@ diet-recommendation-api/
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/diet-recommendation-api.git
+git clone https://github.com/Kartik-Budhlakoti/diet-recommendation-api.git
 cd diet-recommendation-api
 
 # Create and activate virtual environment
@@ -103,7 +103,7 @@ Interactive docs at `http://127.0.0.1:8000/docs`
 ### Base URL
 ```
 http://127.0.0.1:8000/api/v1        # local
-https://your-app.onrender.com/api/v1 # production
+https://diet-recommendation-api-pk9g.onrender.com/api/v1    # production
 ```
 
 ---
@@ -291,9 +291,9 @@ docker run -p 8000:8000 -e DATABASE_URL=sqlite:///./diet_app.db diet-api
 
 This API is deployed on **Render** (free tier).
 
-**Live URL:** `https://your-app.onrender.com`
+**Live URL:** `https://diet-recommendation-api-pk9g.onrender.com/`
 
-**Interactive Docs:** `https://your-app.onrender.com/docs`
+**Interactive Docs:** `https://diet-recommendation-api-pk9g.onrender.com/docs`
 
 ### Deploy Your Own Instance
 
@@ -326,4 +326,4 @@ This prototype is the foundation of a larger healthcare backend system currently
 **Kartik Budhlakoti**  
 B.Tech Computer Science — 3rd Year  
 Currently learning: Linux, Docker, FastAPI  
-GitHub: github.com/yourusername
+GitHub: github.com/Kartik-Budhlakoti
