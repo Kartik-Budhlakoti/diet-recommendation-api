@@ -1,0 +1,19 @@
+name: C/CD Pipeine
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy : 
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/Checkout
+
+      - name: Build Docker image
+        uses: docker build -t diet-api .
+
+      - name: Deploy to render
+        uses: curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK}}
