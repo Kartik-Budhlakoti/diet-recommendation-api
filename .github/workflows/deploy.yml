@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Build Docker image
-        uses: docker build -t diet-api .
+        run: docker build -t diet-api .
 
       - name: Deploy to render
-        uses: curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK}}
+        run: curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK}}
