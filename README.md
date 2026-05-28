@@ -22,6 +22,23 @@ The recommendation engine is rule-based by design. The original synopsis called 
 
 ---
 
+## Security Considerations
+
+**Current prototype limitations:**
+- No authentication layer — user_id based identification only
+- Intended for development and demonstration purposes only
+
+These limitations are intentional for a prototype scope. Authentication, role-based access control, and rate limiting are being implemented from the ground up in a separate healthcare backend project currently in development.
+
+## Healthcare Relevance
+
+This API demonstrates data handling patterns directly applicable to healthcare systems:
+
+- Input validation prevents malformed health data from reaching storage
+- Environment-based secrets management keeps credentials out of source code
+- API versioning ensures backward compatibility for clinical integrations
+- Structured food logging mirrors patient data audit trail requirements
+
 ## Tech Stack
 
 | Layer | Technology |
@@ -294,7 +311,7 @@ Deployed on Render with a managed PostgreSQL database.
 **Live URL:** https://diet-recommendation-api-pk9g.onrender.com  
 **Docs:** https://diet-recommendation-api-pk9g.onrender.com/docs
 
-> Render free tier spins down after 15 minutes of inactivity. The first request after that takes 20-30 seconds to wake up. Hit the live URL once before testing if you haven't used it recently.
+> **Note:** Deployed on Render free tier. First request after inactivity takes 20-30 seconds (cold start). This is a deployment tier limitation, not an application issue.
 
 ### Deploy Your Own Instance
 
